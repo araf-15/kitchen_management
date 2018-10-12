@@ -1,0 +1,19 @@
+-----------------Create Customer Table------------------
+CREATE TABLE customer(
+	Customer_ID INT NOT NULL AUTO_INCREMENT,
+    First_Name VARCHAR(100),
+    Last_Name VARCHAR (100),
+    Username VARCHAR (20),
+    Address VARCHAR (510),
+    Email VARCHAR (150),
+    Contact_Number VARCHAR (55),
+    Date_Of_Birth DATE,
+    Password VARCHAR (255),
+    Gender VARCHAR (8),
+    Fond_Of_Food VARCHAR (255),
+    
+    PRIMARY KEY (Customer_ID)
+);
+
+----------------------Counting Age----------------------
+SELECT (FLOOR(DATEDIFF(CURDATE(), Date_Of_Birth))/365) FROM customer;
